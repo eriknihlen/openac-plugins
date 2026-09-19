@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "solrlabs.buffbot",
+      "name": "BuffBot",
+      "author": "SolrLabs",
+      "description": "Buffs you and your fellowship on request, in game or headless.",
+      "repo": "solrlabs/openac-buffbot"
+    }
+  ],
+  "blocked": []
+}
