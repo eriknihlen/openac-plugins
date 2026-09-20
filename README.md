@@ -16,15 +16,5 @@ public repository with a conforming release.
 ## What listing means
 
 A listed plugin has passed the mechanical checks and been looked at. It has not been audited.
-Plugins run with the full rights of the game client. A plugin can be blocked later, by id and
+Plugins run with the full rights of the game client. If deemed necessary, a plugin can be blocked later, by id and
 version, with a reason the launcher shows.
-
-## For the maintainer: publishing the list
-
-Plugin authors never do this; they open an issue, as above. The launcher reads the list from the
-latest release's asset, not from the file in this repository, so a commit alone changes nothing
-for players. Edit `plugins.json`, commit, then publish it as the asset of a new release:
-
-    gh release create list-YYYY-MM-DD plugins.json --title "Plugin list YYYY-MM-DD" --notes "..."
-
-The list must contain at least one plugin; the launcher refuses an empty one.
