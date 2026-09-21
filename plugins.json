@@ -7,6 +7,13 @@
       "author": "SolrLabs",
       "description": "Buffs you and your fellowship on request, in game or headless.",
       "repo": "solrlabs/openac-buffbot"
+    },
+    {
+      "id": "acdream.mosstank",
+      "name": "MossTank",
+      "author": "Erik Nihlén",
+      "description": "A VTank-compatible combat, looting, buffing and navigation macro that reads your existing VTank profiles.",
+      "repo": "eriknihlen/openac-mosstank"
     }
   ],
   "blocked": []
