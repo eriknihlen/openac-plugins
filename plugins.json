@@ -14,6 +14,13 @@
       "author": "Erik Nihlén",
       "description": "A VTank-compatible combat, looting, buffing and navigation macro that reads your existing VTank profiles.",
       "repo": "eriknihlen/openac-mosstank"
+    },
+    {
+      "id": "openac.goarrow",
+      "name": "GoArrow",
+      "author": "Johan Lundberg",
+      "description": "Points the way to any location or coordinates, with routes through portals.",
+      "repo": "johanlundberg/OpenAC-GoArrow"
     }
   ],
   "blocked": []
