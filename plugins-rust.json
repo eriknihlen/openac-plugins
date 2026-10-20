@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "acdream.mosstank",
+      "name": "MossTank",
+      "author": "Erik Nihlén",
+      "description": "A VTank-compatible combat, looting, buffing and navigation macro that reads your existing VTank profiles.",
+      "repo": "eriknihlen/openac-mosstank",
+      "client": "openac-rust"
+    }
+  ],
+  "blocked": []
+}
