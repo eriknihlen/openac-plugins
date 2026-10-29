@@ -11,6 +11,17 @@ own file from this repository's latest release:
 Every list release carries both files. An entry in `plugins-rust.json` names its client with
 `"client": "openac-rust"`; a plugin that exists for both clients keeps the same id in both lists.
 
+## Writing a plugin
+
+The documentation for both clients is at **[eriknihlen.github.io/OpenAC](https://eriknihlen.github.io/OpenAC/)**:
+
+- **OpenAC (C#):** [Writing a plugin](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html),
+  the [Plugin API](https://eriknihlen.github.io/OpenAC/docs/plugin-api.html) by topic, and the
+  [Plugin API reference](https://eriknihlen.github.io/OpenAC/api/index.html) for every type and member.
+- **OpenAC-rust (WebAssembly):** [The Rust client](https://eriknihlen.github.io/OpenAC/docs/rust-client.html)
+  and its plugin API versions, and the
+  [Rust plugin development guide](https://github.com/eriknihlen/openac-rust/blob/main/docs/plugin-development.md).
+
 ## Getting a plugin listed
 
 Open an issue here with your plugin's id, display name, author name, a one-line description, the
@@ -18,7 +29,7 @@ Open an issue here with your plugin's id, display name, author name, a one-line 
 
 - **OpenAC (C#):** publish a release the launcher can install and check the zip with
   `acdream-plugincheck`; the rules are in OpenAC's
-  [plugin development guide](https://github.com/eriknihlen/OpenAC/blob/main/docs/plugin-development.md).
+  [plugin development guide](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html).
 - **OpenAC-rust (WebAssembly):** publish a release tagged `wasm-v<version>` (not marked latest, so a
   C# release can stay the repository's latest), with `plugin.json`, `<id>-<version>.zip` and its
   `.sha256`, made and checked with `plugincheck pack`; the rules are in OpenAC-rust's
