@@ -8,6 +8,14 @@
       "description": "A VTank-compatible combat, looting, buffing and navigation macro that reads your existing VTank profiles.",
       "repo": "eriknihlen/openac-mosstank",
       "client": "openac-rust"
+    },
+    {
+      "id": "openac.mudsort",
+      "name": "MudSort",
+      "author": "Erik Nihlén",
+      "description": "mudzereli's mudsort inventory sorter: sorts packs and chests by any item property, with mudsort's sort strings and a preview of the result.",
+      "repo": "eriknihlen/openac-mudsort",
+      "client": "openac-rust"
     }
   ],
   "blocked": []
