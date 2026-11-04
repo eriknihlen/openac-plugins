@@ -16,6 +16,14 @@
       "description": "mudzereli's mudsort inventory sorter: sorts packs and chests by any item property, with mudsort's sort strings and a preview of the result.",
       "repo": "eriknihlen/openac-mudsort",
       "client": "openac-rust"
+    },
+    {
+      "id": "openac.goarrow",
+      "name": "GoArrow",
+      "author": "Erik Nihlén, Johan Lundberg",
+      "description": "Routes to any place or map coordinates over walks, portals and recalls, points the way and can walk it, with a Dereth map.",
+      "repo": "johanlundberg/OpenAC-GoArrow",
+      "client": "openac-rust"
     }
   ],
   "blocked": []
