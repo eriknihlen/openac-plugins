@@ -1,49 +1,38 @@
 # OpenAC plugin list
 
-The lists of plugins the OpenAC launchers show in their **Discover** panel. Each launcher reads its
-own file from this repository's latest release:
+The list of plugins the [OpenAC](https://github.com/eriknihlen/OpenAC) launcher shows in its
+**Discover** panel. The launcher reads `plugins-rust.json` from this repository's latest release.
 
 | File | Launcher | Plugins |
 |---|---|---|
-| `plugins.json` | [OpenAC](https://github.com/eriknihlen/OpenAC) (C#) | .NET plugins |
-| `plugins-rust.json` | [OpenAC-rust](https://github.com/eriknihlen/openac-rust) | WebAssembly plugins |
+| `plugins-rust.json` | [OpenAC](https://github.com/eriknihlen/OpenAC) (the Rust client) | WebAssembly plugins |
+| `plugins.json` | OpenAC (C#), retired at 0.1.33 | .NET plugins; **frozen** |
 
-Every list release carries both files. An entry in `plugins-rust.json` names its client with
-`"client": "openac-rust"`; a plugin that exists for both clients keeps the same id in both lists.
+The C# client is retired: `plugins.json` no longer changes, but every list release still carries it
+so that the last C# launchers keep their plugin list. Its history is on the `deprecated` branch.
+An entry in `plugins-rust.json` names its client with `"client": "openac-rust"` (the launcher's
+name for the Rust client; it stays as it is).
 
 ## Writing a plugin
 
-The documentation for both clients is at **[eriknihlen.github.io/OpenAC](https://eriknihlen.github.io/OpenAC/)**:
-
-- **OpenAC (C#):** [Writing a plugin](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html),
-  the [Plugin API](https://eriknihlen.github.io/OpenAC/docs/plugin-api.html) by topic, and the
-  [Plugin API reference](https://eriknihlen.github.io/OpenAC/api/index.html) for every type and member.
-- **OpenAC-rust (WebAssembly):** [The Rust client](https://eriknihlen.github.io/OpenAC/docs/rust-client.html)
-  and its plugin API versions, and the
-  [Rust plugin development guide](https://github.com/eriknihlen/openac-rust/blob/main/docs/plugin-development.md).
+The documentation is at **[eriknihlen.github.io/OpenAC](https://eriknihlen.github.io/OpenAC/)**:
+[the Rust client](https://eriknihlen.github.io/OpenAC/docs/rust-client.html) and its plugin API
+versions, and the [plugin development guide](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html).
 
 ## Getting a plugin listed
 
-Open an issue here with your plugin's id, display name, author name, a one-line description, the
-`owner/name` of its GitHub repository, and which client it is for.
+Open an issue here with your plugin's id, display name, author name, a one-line description and the
+`owner/name` of its GitHub repository. Publish a release tagged `wasm-v<version>` (not marked latest
+if the repository also has other releases), with `plugin.json`, `<id>-<version>.zip` and its
+`.sha256`, made and checked with `plugincheck pack`; the rules are in the
+[plugin development guide](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html).
 
-- **OpenAC (C#):** publish a release the launcher can install and check the zip with
-  `acdream-plugincheck`; the rules are in OpenAC's
-  [plugin development guide](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html).
-- **OpenAC-rust (WebAssembly):** publish a release tagged `wasm-v<version>` (not marked latest, so a
-  C# release can stay the repository's latest), with `plugin.json`, `<id>-<version>.zip` and its
-  `.sha256`, made and checked with `plugincheck pack`; the rules are in OpenAC-rust's
-  [plugin development guide](https://github.com/eriknihlen/openac-rust/blob/main/docs/plugin-development.md).
-  A repository that ships both clients should publish the C# and WebAssembly builds of a version
-  together.
-
-A plugin does not need to be listed to be installed: **Add from URL** in either launcher takes any
+A plugin does not need to be listed to be installed: **Add from URL** in the launcher takes any
 public repository with a conforming release.
 
 ## What listing means
 
-A listed plugin has passed the mechanical checks and been looked at. It has not been audited.
-A .NET plugin runs with the full rights of the game client. A WebAssembly plugin runs in a sandbox
-and can use only the permissions its `plugin.json` declares, which the launcher shows before
-installing. If deemed necessary, a plugin can be blocked later, by id and version (and, in
-`plugins-rust.json`, by client), with a reason the launcher shows.
+A listed plugin has passed the mechanical checks and been looked at. It has not been audited. A
+WebAssembly plugin runs in a sandbox and can use only the permissions its `plugin.json` declares,
+which the launcher shows before installing. If deemed necessary, a plugin can be blocked later, by
+id and version (and by client), with a reason the launcher shows.
