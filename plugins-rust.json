@@ -24,6 +24,14 @@
       "description": "Routes to any place or map coordinates over walks, portals and recalls, points the way and can walk it, with a Dereth map.",
       "repo": "johanlundberg/OpenAC-GoArrow",
       "client": "openac-rust"
+    },
+    {
+      "id": "rabiddee.aethrix-vision",
+      "name": "Aethrix Vision",
+      "author": "RabidDee",
+      "description": "Finds the objects and people you search for, marks them in the world and on a HUD, and shades ground you can't walk on.",
+      "repo": "davidc-smith/OpenAC-Aethrix",
+      "client": "openac-rust"
     }
   ],
   "blocked": []

@@ -26,6 +26,9 @@ Open an issue here with your plugin's id, display name, author name, a one-line 
 if the repository also has other releases), with `plugin.json`, `<id>-<version>.zip` and its
 `.sha256`, made and checked with `plugincheck pack`; the rules are in the
 [plugin development guide](https://eriknihlen.github.io/OpenAC/docs/plugin-development.html).
+A repository publishing several plugins (a suite) tags each release `wasm-<id>-v<version>` instead
+and keeps a `plugins-index.json` on a `wasm-index` release, as the guide describes; open one issue
+per plugin as each is released.
 
 A plugin does not need to be listed to be installed: **Add from URL** in the launcher takes any
 public repository with a conforming release.
